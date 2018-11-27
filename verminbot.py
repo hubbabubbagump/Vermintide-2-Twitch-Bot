@@ -15,27 +15,6 @@ def setup():
     config.read('.twitch.cfg')
     return config
 
-def is_stream_online(channel, clientid):
-        url = 'https://api.twitch.tv/helix/users?login=' + channel
-        headers = {'Client-ID': clientid}
-        r = requests.get(url, headers=headers).json()
-        if not 'data' in r or len(r['data']) == 0:
-            return False
-        
-        channelid = r['data'][0]['id']
-
-        url = 'https://api.twitch.tv/kraken/streams/' + channelid
-        headers = {'Accept': 'application/vnd.twitchtv.v5+json', 'Client-ID': clientid}
-        r = requests.get(url, headers=headers).json()
-
-        if not 'stream' in r:
-            return False
-
-        if r['stream'] == None:
-            return False
-
-        return True
-
 def grab_frame(streamVideo):
     # FETCH FRAME OF STREAM
     frame = streamVideo.read()

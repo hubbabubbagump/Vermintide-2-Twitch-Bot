@@ -34,15 +34,9 @@ class TwitchChat(irc.bot.SingleServerIRCBot):
         print('Chat worker bot initialized on channel ' + self.channel_id)
 
     def on_welcome(self, c, e):
-        # You must request specific capabilities before you can use them
-        # c.cap('REQ', ':twitch.tv/membership')
-        # c.cap('REQ', ':twitch.tv/tags')
-        # c.cap('REQ', ':twitch.tv/commands')
         self.isConnected = True
         c.join(self.channel_id)
         threading.Timer(3, self.check_messages).start()
-        # threading.Timer(5, self.grab_frame).start()
-        # threading.Thread(target=self.do_command, args=(c, e, "hello",)).start()
 
     def on_disconnect(self, c, e):
         self.isConnected = False
@@ -57,14 +51,6 @@ class TwitchChat(irc.bot.SingleServerIRCBot):
         print('[%s] Even more info: %s ', self.worker_name, event_str)
         print('[%s] Attempting to reconnect...', self.worker_name)
 
-    def on_pubmsg(self, c, e):
-        self.do_command("test")
-        return
-
-    def do_command(self, msg):
-        # c = self.connection
-        self.connection.privmsg(self.channel_id, msg)
-
     def check_messages(self):
         if self.isConnected:
             self.msg_lock.acquire()
@@ -75,7 +61,6 @@ class TwitchChat(irc.bot.SingleServerIRCBot):
             finally:
                 self.msg_lock.release()
                 threading.Timer(3, self.check_messages).start()
-        
 
     def add_message(self, msg):
         self.msg_lock.acquire()
@@ -83,24 +68,3 @@ class TwitchChat(irc.bot.SingleServerIRCBot):
             self.message_queue.append(msg)
         finally:
             self.msg_lock.release()
-
-    def is_stream_online(channel, clientid):
-        url = 'https://api.twitch.tv/helix/users?login=' + channel
-        headers = {'Client-ID': clientid}
-        r = requests.get(url, headers=headers).json()
-        if not 'data' in r or len(r['data']) == 0:
-            return False
-        
-        channelid = r['data'][0]['id']
-
-        url = 'https://api.twitch.tv/kraken/streams/' + channelid
-        headers = {'Accept': 'application/vnd.twitchtv.v5+json', 'Client-ID': clientid}
-        r = requests.get(url, headers=headers).json()
-
-        if not 'stream' in r:
-            return False
-
-        if r['stream'] == None:
-            return False
-
-        return True
