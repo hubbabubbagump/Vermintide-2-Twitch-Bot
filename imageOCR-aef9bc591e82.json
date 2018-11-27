@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "imageocr-223707",
+  "private_key_id": "aef9bc591e821609af2d036aa341ecbe711a56ad",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDLfKo18Hln1qCd\nw1GiGJxrtycJ0qkCgM4wrznZI3xElfGGkI5vApbGkOu/gO27/vTdfKnC4oStpEhX\nZ0hR+kYiRx71Axf8bCbqwirDrMGUCcaCi0rTOgRb/LvCGYVn0iKLFCXfbpzlICxk\nIp4qM/Tgw4dybhJ+wsysjFNBnixhjwbEAt0cAm6EQ79uH9FZH6UHcxVm/u6B9Zba\nXWVkNWY+cML5mBBWt2evwxAZsFs1uzk4eLqY5OXkM8rFcNoAb4L+y91cevcOOVul\nMJVUyGUPGwkCBEL5wHXm+0m5j+Xh0DSQU6MApmlvYWbaC020zQt1xusvxFAjrzoF\nZdRcZEDdAgMBAAECggEAAJ3HjDNGwtxBD0lEqYeGjcL3wM1dCq9mMHqPY8t6OGD1\n4tD0RXzOBRryQ9m5npymlDco8niqKzZ4q58Z9nmaFcd+XgKc43xWX9ant4EB8xdW\nfRW768jcs4Sf8vYN0+MsjJxKgxM8MWt4BvOd5AXVQ4sEEYIo1y5y3UDtjaDThJYf\nbo8EPXQqN/grIBIk8FIQapxBTXEPSV8nVxyOeqvao4G6zjk3M4LCHhKNEfow0EWQ\n42tq+ELk8kpbAe0YMiLwOzQDdCSjPyJu1PyjKiGSdf9R4ESrRUdPRzaSJEVNanVy\n41Y5hfs6bZ13+PGLbLev4thrFKKEZNHDBO2GiqUbZwKBgQDqL34fIxhBPJBYUCqy\nhJ73SUtklnE8IdBBO/HquW2E0erWbtu+F1I1tl6mOTT+WpNLZfXlujrzZDhWudCF\nHCLdrNf2tFT1ynlmadmOysh5TLiGOCa34l0ArA3g52n82ylZZJS2oMwbVWGlFo6z\nC6TQCVmYut+zWMW45SKuMq4D7wKBgQDecR55A1rNBrfLZx8Fug+G09u2XU41XaS9\nGG1L8e2GrndVtemOkfyQ+8EWAvdw5Pvfp46UzMihqDevAdJ4tGiLWBXgAamxmUgP\nxgTvn55ukk4KFzAIQdgZoku+JMJdZ41CnwauNFMBkW1EIkFy/Nd+cdaGnq5oxY2A\nPJPLBWjL8wKBgH4cLTLfV0RqNOEZ6qRPvrs0ASGd0kSrgNZgTZo1WMDZujjXYgYv\n0NmT58xjqiH+7KsBsTWQ4AYJxj0NuzizOiNd3L7Bxa7G5jE8dyfqE6MeqY+91TvY\n7nRaMu8WL4E3FEFLZLokRUXC6N5aE2ZfstVE87bHi4etGmzDF7XvHL6JAoGBALcg\npZe23VAhkbqRAQcz8IhtblqqYjKpD3Dl5UU6vPO+OlyD0O4g3a92s7WtZ4y312x/\ng3CZTytXU9BuTZo13EOrlwa+F7gwmxTxTyr/W+1n4XuJL2/81S31YSn/FUzUbYVF\nariMNzH5Sd1n3j4OTlK44YYeqTN0QFQsivf/UhFlAoGBAL0Mpy/kVJrcZZSITVbV\ntBm5bLcOB3Gvxk8bum+PkB6b186HBH86p0YnLsJISKkygKyHwOaxJT57AtP4b/74\nNj+1qDe8J1W3QQKwpHeeRIJIFSKxnGq8luxoq+ROeUYJyNVk/MYrpfOMMAbzIio6\nKrtIGM9k/Co6ePnyLHm3fooh\n-----END PRIVATE KEY-----\n",
+  "client_email": "vermintide-2-image-ocr@imageocr-223707.iam.gserviceaccount.com",
+  "client_id": "105092586048412291240",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vermintide-2-image-ocr%40imageocr-223707.iam.gserviceaccount.com"
+}
