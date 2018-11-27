@@ -46,7 +46,7 @@ class ImageRecognition:
             if prevWord:
                 stringToCheck = prevWord + " " + text.description
                 for m in modifiers:
-                    if stringToCheck.lower() in m.lower():
+                    if (stringToCheck.lower() in m.lower()) or (m.lower() in stringToCheck.lower()):
                         for vertex in text.bounding_poly.vertices:
                             xVertex = vertex.x
                             break
