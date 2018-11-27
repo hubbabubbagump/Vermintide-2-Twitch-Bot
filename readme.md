@@ -28,6 +28,7 @@ pip install -r requirements.txt
 - Input the channel name of the streamer into the `Twitch Channel` field 
     - channel name = 'twitch.tv/`<channel name>`'
 - Reorder the modifiers based on preference (descending order from top to bottom)
+- Press `save` to save the reordered modifier list and text in the OAuth and Channel fields
 
 ### TODO
 - Create a GUI and a better way to exit the application.
