@@ -6,10 +6,9 @@ from twitchchat import TwitchChat
 import threading
 import requests
 import time
-import pygame
 
 FRAME_GRAB_DELAY = 5
-ANALYZE_DELAY = 15
+ANALYZE_DELAY = 20
 
 def setup():
     config = configparser.ConfigParser()
@@ -48,7 +47,7 @@ def grab_frame(streamVideo):
 
 def analyzeFrame(settings, modlist):
     # GOOGLE IMAGE OCR
-    analyzer = ImageRecognition(settings['API']['key'])
+    analyzer = ImageRecognition()
     left, right = analyzer.analyze(modlist)
 
     if not left and not right:
@@ -69,7 +68,6 @@ def main():
     settings = setup()
     mods = settings['V2']['mods']
     modlist = mods.split(',')
-    pygame.init()
 
     channel = settings['TWITCH']['twitch_channel']
     oauth_token = settings['TWITCH']['oauth_token']
@@ -92,15 +90,15 @@ def main():
             frameSet = grab_frame(streamVideo)
 
         if (i % ANALYZE_DELAY == 0) and (frameSet):
-            # inputText = analyzeFrame(settings, modlist)
-            inputText = ""
+            inputText = analyzeFrame(settings, modlist)
+            # inputText = ""
             if inputText:
                 bot.add_message(inputText)
             else:
                 # bot.add_message('No corresponding text found on screen ' + str(i))
                 pass
 
-        if i > 150:
+        if i > 300:
             i = 1
         else:
             i += 1

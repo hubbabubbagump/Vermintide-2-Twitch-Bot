@@ -10,7 +10,6 @@ The list of modifiers are saved in `.twitch.cfg` under the `mod` key, sorted in 
 ### Installation
 - Download Python v3.6+
 - Enable the Google Vision API [here][api]
-- Add the API key to the `key` field in `.twitch.cfg`
 - Setup a Google Cloud Platform Project and Authentication [here][gcp]
     - Follow the instructions listed under "If you have not created a Google Cloud Platform (GCP) project and service account credentials, do so now. Expand this section for instructions."
 - Fetch an OAuth token from Twitch [here][oauth]

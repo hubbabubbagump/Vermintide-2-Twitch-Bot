@@ -11,7 +11,7 @@ from difflib import SequenceMatcher
 FILENAME = "frame.jpg"
 
 class ImageRecognition:
-    def __init__(self, key):
+    def __init__(self):
         self.client = vision.ImageAnnotatorClient()
 
     def similar(self, a, b):
@@ -29,7 +29,8 @@ class ImageRecognition:
         image = vision.types.Image(content=content)
         response = self.client.text_detection(image=image)
         texts = response.text_annotations
-        print(texts)
+        # print(texts)
+        
         item = 0
         modifiers = []
         left = ""
