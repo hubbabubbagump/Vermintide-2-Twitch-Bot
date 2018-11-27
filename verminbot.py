@@ -47,8 +47,8 @@ class RunThread(QThread):
         elif not right:
             return "#A"
 
-        leftIndex = modlist.index(left)
-        rightIndex = modlist.index(right)
+        leftIndex = self.modlist.index(left)
+        rightIndex = self.modlist.index(right)
         if leftIndex < rightIndex:
             return "#A"
         else:
@@ -59,6 +59,9 @@ class RunThread(QThread):
 
     def unpause(self):
         self.pause = False
+
+    def updateModifierList(self, newList):
+        self.modlist = newList
 
     def run(self):
         streamVideo = VideoCapturer('https://www.twitch.tv/' + self.channel)
@@ -171,6 +174,7 @@ class GUI(QWidget):
         config.set('V2', 'mods', ','.join(self.modifiers))
         with open(CONFIG_FILE_NAME, 'w') as configfile:
             config.write(configfile)
+        self.runThread.updateModifierList(self.modifiers)
 
 def setup():
     config = configparser.ConfigParser()
