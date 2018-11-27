@@ -36,8 +36,7 @@ pip install -r requirements.txt
 - Reorder the modifiers based on preference (descending order from top to bottom)
 - Press `save` to save the reordered modifier list and text in the OAuth and Channel fields
 
-### TODO
-- Create a GUI and a better way to exit the application.
+> If editing the OAuth token or channel field, the application must be restarted
 
 [api]: <https://cloud.google.com/vision/docs/before-you-begin>
 [gcp]: <https://cloud.google.com/vision/docs/ocr#text_detection_requests>
