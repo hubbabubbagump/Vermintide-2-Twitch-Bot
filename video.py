@@ -1,7 +1,5 @@
 import streamlink
 import cv2
-import numpy as np
-import time
 
 class VideoCapturer:
     def __init__(self, link):

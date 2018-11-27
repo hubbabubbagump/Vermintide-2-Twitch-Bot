@@ -1,12 +1,9 @@
-# import pytesseract
 import cv2
 from PIL import Image
 import os
 import io
 from google.cloud import vision
 from difflib import SequenceMatcher
-# import cloudmersive_ocr_api_client
-# from cloudmersive_ocr_api_client.rest import ApiException
 
 FILENAME = "frame.jpg"
 
@@ -29,8 +26,7 @@ class ImageRecognition:
         image = vision.types.Image(content=content)
         response = self.client.text_detection(image=image)
         texts = response.text_annotations
-        # print(texts)
-        
+
         item = 0
         modifiers = []
         left = ""
