@@ -7,7 +7,7 @@ Vermintide 2 Twitch Bot is a program that takes advantage of the Twitch API and 
 </p>
 
 ### How it works
-The Vermintide 2 Twitch Bot uses [Streamlink][streamlink] to fetch frames from a designated stream every 5 seconds and saves them under the name of `frames.jpg`. The saved image is send to the Google Vision API for text recognition, and the resulting text strings are compared with the list of [Vermintide 2 modifiers][v2mods]. If a match between the results and the modifier list is found, the Twitch bot posts either "#A" or "#B" to the specified Twitch channel.
+The Vermintide 2 Twitch Bot uses [Streamlink][streamlink] to fetch frames from a designated stream every 5 seconds and saves them under the name of `frames.jpg`. The saved image is sent to the Google Vision API for text recognition, and the resulting text strings are compared with the list of [Vermintide 2 modifiers][v2mods]. If a match between the results and the modifier list is found, the Twitch bot posts either "#A" or "#B" (depending on the location of the text string) to the specified Twitch channel.
 
 PyQt 5.9.2 is used for the GUI.
 
