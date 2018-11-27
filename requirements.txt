@@ -1,6 +1,6 @@
 streamlink
-numpy
 opencv-python
 google-cloud-vision
 irc
-pil
+Pillow
+PyQt5==5.9.2

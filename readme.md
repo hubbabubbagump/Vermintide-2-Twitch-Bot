@@ -9,13 +9,8 @@ The list of modifiers are saved in `.twitch.cfg` under the `mod` key, sorted in 
 
 ### Installation
 - Download Python v3.6+
-- Enable the Google Vision API [here][api]
 - Setup a Google Cloud Platform Project and Authentication [here][gcp]
     - Follow the instructions listed under "If you have not created a Google Cloud Platform (GCP) project and service account credentials, do so now. Expand this section for instructions."
-- Fetch an OAuth token from Twitch [here][oauth]
-- Input the OAuth token into the `oauth_token` in `.twitch.cfg`
-    - Twitch's OAuth token is generated in the form 'oauth:`<oauth_token>`'
-- Input the channel name of the streamer into the `twitch_channel` field in `.twitch.cfg`
 - Install the required packages
 ```txt
 pip install -r requirements.txt
@@ -23,7 +18,14 @@ pip install -r requirements.txt
 
 ### How to run
 - Run `python verminbot.py`
-- Exit the application using `Ctrl+C`
+
+### Running the application
+- Fetch an OAuth token from Twitch [here][oauth]
+- Input the OAuth token into the `OAuth Token` field
+    - Twitch's OAuth token is generated in the form 'oauth:`<oauth_token>`'
+- Input the channel name of the streamer into the `Twitch Channel` field 
+    - channel name = 'twitch.tv/`<channel name>`'
+- Reorder the modifiers based on preference (descending order from top to bottom)
 
 ### TODO
 - Create a GUI and a better way to exit the application.
